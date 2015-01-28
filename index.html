@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<script>
+var host = "jacklew.is";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">    
@@ -17,8 +23,4 @@ layout: default
   {% endfor %}
 </div>
 
-<script>
-var host = "YOURDOMAIN.github.io";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-    window.location.protocol = "https";
-</script>
+

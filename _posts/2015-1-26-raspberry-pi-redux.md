@@ -6,6 +6,10 @@ title: Raspberry Pi Door Opener Redux
 ![The new opener, installed](https://{{ site.url }}/images/rpi-two/install.jpg) 
 ### New Room, New Door Opener
 
+{{site}}
+{{site.host}}
+{{site.hostname}}
+
 When the Computer Club moved rooms, I wanted to improve the software that I had written for the door opener. It also turned out that the existing door opener was not able to open the new door. The old handle was very easy to turn, but the new one was more rigid, so I had to build an opener that had more torque.
 
 ![Side View of the new opener]({{ site.url }}/images/rpi-two/side-view.jpg)

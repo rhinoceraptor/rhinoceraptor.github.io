@@ -7,7 +7,7 @@ title: Raspberry Pi Door Opener
 I have done a new version of the project, you can read about it [here]({{ site.url }}/raspberry-pi-redux/).
 
 #### Overview of the project
-![Completed Project]({{ site.url }}/images/rpi-one/installation.jpg)
+![Completed Project](https://farm9.staticflickr.com/8666/16359613716_13cbf07f0c_o.jpg)
 
 I wanted to build a door opener for my university computer club. Our office has doors that cannot be unlocked permanently, and giving out keys is problematic since it's expensive, especially if we had to change the locks.
 
@@ -25,7 +25,7 @@ Therefore, it made sense to build an opener using a magnetic card reader. This m
 - Two 5 volt power supplies (for simplicity, the servo and the RPi get their own power. The RPi needs **at least** 700 mA. It's better to be closer to a full one amp.)
 - A project box
 
-![Internal Wiring]({{ site.url }}/images/rpi-one/wiring.jpg)
+![Internal Wiring](https://farm9.staticflickr.com/8605/16359613746_e504b20770_o.jpg)
 Here you can see everything wired up. The RPi is connected to the lid of the case using double sided case standoffs. This way I can remove the lid while the bottom is still attached to the door with foam tape.
 
 #### Putting the parts together

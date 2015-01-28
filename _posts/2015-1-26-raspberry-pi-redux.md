@@ -3,29 +3,29 @@ layout: post
 title: Raspberry Pi Door Opener Redux
 ---
 
-![The new opener, installed]({{ site.url }}/images/rpi-two/install.jpg) 
+![The new opener, installed](https://farm8.staticflickr.com/7335/16198184960_53fbb76b60_b.jpg)
 ### New Room, New Door Opener
 
 When the Computer Club moved rooms, I wanted to improve the software that I had written for the door opener. It also turned out that the existing door opener was not able to open the new door. The old handle was very easy to turn, but the new one was more rigid, so I had to build an opener that had more torque.
 
-![Side View of the new opener]({{ site.url }}/images/rpi-two/side-view.jpg)
+![Side View of the new opener](https://farm9.staticflickr.com/8573/16198184980_4632b94c22_b.jpg)
 I accomplished this using a NEMA 17 stepper motor, and gears printed on the Computer Club's RepRap 3D printer. The smaller gear is mounted using a captive nut to the stepper motor's axle, and it turns the larger gear. String wraps around the shaft of the larger gear, between it and the body of the lid.
 
-![Top view of the new opener]({{ site.url }}/images/rpi-two/top-view.jpg)
+![Top view of the new opener](https://farm8.staticflickr.com/7347/16384671762_d04ee75958_o_d.jpg)
 The many small holes are the product of the [OpenSCAD script](http://www.thingiverse.com/thing:6544) I used to generate the gears. I needed a small hole to tie the string off with, and I'm not proficient enough to make a single small hole, so I had the script generate many holes so that they were small.
 
-![Internal Wiring of the project]({{ site.url }}/images/rpi-two/wiring.jpg)
+![Internal Wiring of the project](https://farm8.staticflickr.com/7300/16359614906_230b6787ea_o_d.jpg)
 Here is the wiring for the project. I am using the [Easy Driver](http://www.schmalzhaus.com/EasyDriver/) stepper motor driver from SparkFun. All you need to do is connect your stepper motor's coils correctly, provide 12 volts, and then pulse the step and/or direction pins to control your stepper.
 
 I am using a 5 volt relay, (triggered using an NPN transistor, one GPIO ping and the Raspberry Pi's 5 volt output) to turn off power to the Easy Driver board when the stepper is not in use. Stepper motors use a considerable amount of current while idle, and they can get pretty hot.
 
-![Rear view of the project]({{ site.url }}/images/rpi-two/back-view.jpg)
+![Rear view of the project](https://farm8.staticflickr.com/7384/16383857131_df876e12d0_o_d.jpg)
 The power supply has a standard Molex power connector. I used JB weld to secure the male side of a Molex cable to the project box. The 5 volt connection is wired to a micro USB cable, and the 12 volts is wired through the relay as I described.
 
-![Reed switch project box]({{ site.url }}/images/rpi-two/reed.jpg)
+![Reed switch project box](https://farm9.staticflickr.com/8673/16383857201_25c52c2472_o_d.jpg)
 Since stepper motors have no context for what step the axle is in, I needed a way to know when the handle is actually open. I used a small reed switch in another project box for this purpose. When the handle is completely pulled, the reed switch is pressed, and the stepper motor will stop turning. This way, if the gearing is bumped, the stepper motor will continue to turn until the door is open.
 
-![Front view of the project]({{ site.url }}/images/rpi-two/front-view.jpg)
+![Front view of the project](https://farm8.staticflickr.com/7447/15763141904_16c7478cd2_o_d.jpg)
 One of the mono jacks is used to connect the reed switch, and the other is used to connect to the magnetic contact switch that reads whether the door is open or not.
 
 ### Basic Parts List

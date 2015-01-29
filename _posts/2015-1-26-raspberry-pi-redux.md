@@ -27,11 +27,11 @@ I am using a 5 volt relay, (triggered using an NPN transistor, connected to a GP
 ![Rear view of the project](https://farm8.staticflickr.com/7384/16383857131_df876e12d0_o_d.jpg)
 The power supply has a standard Molex power connector. I used JB weld to secure the male side of a Molex cable to the project box. The 5 volt connection is wired to a micro USB cable, and the 12 volts is wired through the relay as I described.
 
-![Reed switch project box](https://farm9.staticflickr.com/8673/16383857201_25c52c2472_o_d.jpg)
-Since stepper motors have no context for what step the axle is in, I needed a way to know when the handle is actually open. I used a small reed switch in another project box for this purpose. When the handle is completely pulled, the reed switch is pressed, and the stepper motor will stop turning. This way, if the gearing is bumped, the stepper motor will continue to turn until the door is open.
+![Limit switch project box](https://farm9.staticflickr.com/8673/16383857201_25c52c2472_o_d.jpg)
+Since stepper motors have no context for what step the axle is in, I needed a way to know when the handle is actually open. I used a small limit switch in another project box for this purpose. When the handle is completely pulled, the limit switch is pressed, and the stepper motor will stop turning. This way, if the gearing is bumped, the stepper motor will continue to turn until the door is open.
 
 ![Front view of the project](https://farm8.staticflickr.com/7447/15763141904_16c7478cd2_o_d.jpg)
-One of the mono jacks is used to connect the reed switch, and the other is used to connect to the magnetic contact switch that reads whether the door is open or not.
+One of the mono jacks is used to connect the limit switch, and the other is used to connect to the magnetic contact switch that reads whether the door is open or not.
 
 ### Basic Parts List
 - medium size project box (from Radio Shack)

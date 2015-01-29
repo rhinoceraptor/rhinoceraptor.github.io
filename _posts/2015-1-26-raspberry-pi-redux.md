@@ -4,12 +4,14 @@ title: Raspberry Pi Door Opener Redux
 ---
 
 ![The new opener, installed](https://farm8.staticflickr.com/7335/16198184960_53fbb76b60_b.jpg)
-### New Room, New Door Opener
 
 ![Outside view of the magnetic card reader](https://farm8.staticflickr.com/7329/16359614766_eb8db7795e_o_d.jpg)
 
 Here is an outside view of the door. All that is visible is the card reader.
 
+The code I've written for this project is available [here](https://github.com/rhinoceraptor/door).
+
+### New Room, New Door Opener
 
 When the Computer Club moved rooms, I wanted to improve the software that I had written for the door opener. It also turned out that the existing door opener was not able to open the new door. The old handle was very easy to turn, but the new one was more rigid, so I had to build an opener that had more torque.
 

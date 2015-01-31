@@ -3,8 +3,6 @@ layout: post
 title: 3D Printed Servo Deadbolt Opener
 ---
 
-### Overview
-
 ![Finished Project](https://farm8.staticflickr.com/7419/16220687689_758c59722b_z_d.jpg)
 
 

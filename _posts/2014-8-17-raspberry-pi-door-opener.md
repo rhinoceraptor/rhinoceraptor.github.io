@@ -3,12 +3,15 @@ layout: post
 title: Raspberry Pi Door Opener
 ---
 
+#### New version of the project
+I have done a new version of the project, you can read about it [here]({{ site.url }}/raspberry-pi-redux/).
+
+#### Overview of the project
+![Completed Project](https://farm9.staticflickr.com/8666/16359613716_13cbf07f0c_o.jpg)
+
 I wanted to build a door opener for my university computer club. Our office has doors that cannot be unlocked permanently, and giving out keys is problematic since it's expensive, especially if we had to change the locks.
 
 Therefore, it made sense to build an opener using a magnetic card reader. This makes it free to grant and revoke access at will.
-
-![Completed Project]({{ site.url }}/images/rpi-one/installation.jpg)
-Here you can see the final project.
 
 #### Basic Parts List
 
@@ -22,7 +25,7 @@ Here you can see the final project.
 - Two 5 volt power supplies (for simplicity, the servo and the RPi get their own power. The RPi needs **at least** 700 mA. It's better to be closer to a full one amp.)
 - A project box
 
-![Internal Wiring]({{ site.url }}/images/rpi-one/wiring.jpg)
+![Internal Wiring](https://farm9.staticflickr.com/8605/16359613746_e504b20770_o.jpg)
 Here you can see everything wired up. The RPi is connected to the lid of the case using double sided case standoffs. This way I can remove the lid while the bottom is still attached to the door with foam tape.
 
 #### Putting the parts together
@@ -46,8 +49,5 @@ Controlling the servo is a pretty trivial addition to jness's code. The authenti
 
 In the main program, we iterate through that file searching for that digest. If it's found, we log the door opening event, and turn the servo. The build also includes red and green indicator LEDs for access denied and granted, respectively.
 
-The software is not totally complete, but feel free to clone it [here](https://github.com/rhinoceraptor/RPiMagstripe). The Raspberry Pi is running Arch Linux ARM.
+The software is not totally complete (or safe, it is written to require root), but feel free to clone it [here](https://github.com/rhinoceraptor/RPiMagstripe). I ran it on Arch Linux ARM.
 
-#### In operation
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/jiVNNNg9Ldc" frameborder="0" allowfullscreen></iframe>

@@ -6,7 +6,7 @@ title: 3D Printed Servo Deadbolt Opener
 ![Finished Project](https://farm8.staticflickr.com/7419/16220687689_758c59722b_z_d.jpg)
 
 
-I wanted to design a part the would allow a common hobby servo to unlock a deadbolt. You could then use RFID or some other means of authentication to open a door.
+I wanted to design a part that would allow a common hobby servo to unlock a deadbolt. You could then use RFID or some other means of authentication to open a door.
 
 
 I used the larger size available at Radio Shack.
@@ -21,13 +21,13 @@ To start, I designed this mount in OpenSCAD, to be bolted or double side taped t
 ![Servo mount](https://farm8.staticflickr.com/7334/16221026167_8ef630b0b6_z_d.jpg)
 
 
-Then I needed a cup to fit over the deadbolt handle:
+Then I needed a cup to fit over the deadbolt handle. I designed the included screw to fit to secure the arm on the servo, but I ended up not using it.
 
 
 ![Deadbolt Cup](https://farm9.staticflickr.com/8663/16380957196_cdd2093e7d_z_d.jpg)
 
 
-On the other side, I used OpenSCAD code from Charles Rincheval for the servo spindle teeth, the code of which is available at [https://github.com/hugokernel/OpenSCAD_ServoArms](https://github.com/hugokernel/OpenSCAD_ServoArms).
+On the other side, I used OpenSCAD code from Charles Rincheval for the servo spindle teeth, the code of which is available at [https://github.com/hugokernel/OpenSCAD_ServoArms](https://github.com/hugokernel/OpenSCAD_ServoArms). Despite each tooth on the servo being only 0.5 mm in length, the Prusa i3 printer I used was able to print the spindle teeth to be more than strong enough for this purpose. The torque that you can get from them is more than the servo can generate itself.
 
 
 ![Servo Teeth](https://farm8.staticflickr.com/7284/16406012172_bdbc72a7a8_z_d.jpg)

@@ -11,7 +11,9 @@ Here is the project, using an Arduino Uno for testing.
 
 ![The project using an Arduino Uno](https://farm8.staticflickr.com/7339/16525954455_dae4872608_z_d.jpg)
 
-The project will use four DHT-11 temperature sensors, an ATMega 328 with an Arduino bootloader (for ease of programming), and an ENC28J60 ethernet module. The microcontroller will take a temperature reading every few seconds, and when a connection comes in, it will send back JSON for easy parsing, in the following format:
+The project will use four DHT-11 temperature sensors, an ATMega 328 with an Arduino bootloader (for ease of programming), and an ENC28J60 ethernet module. 
+
+The microcontroller will take a temperature reading every few seconds, and when a connection comes in on its port 80, it will send back HTTP headers, ```text/json```, and JSON data for easy parsing, in the following format:
 
 ```
 {
@@ -28,6 +30,7 @@ The project will use four DHT-11 temperature sensors, an ATMega 328 with an Ardu
   }
 }
 ```
+
 ![The project, fully breadboarded](https://farm8.staticflickr.com/7399/16338473020_17f4c32a53_z_d.jpg)
 
 Here is the project built out on the breadboard.

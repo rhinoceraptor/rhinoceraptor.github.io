@@ -48,7 +48,7 @@ One of the mono jacks is used to connect the limit switch, and the other is used
 - NPN transistor (since the Raspberry Pi logic level is 3.3 volts)
 
 
-### New Software (Potentially Boring details)
+### New Software
 
 The existing Python scripts stored card track hashes in a CSV file, and used SSH to send the state of the door (open or closed) for our IRC bot. Registering new cards required SSHing to the Raspberry Pi and stopping the persistent Python script, running another Python script. These Python scripts also required root privileges, due to the GPIO being restricted on the Raspberry Pi.
 
@@ -57,6 +57,39 @@ The new system uses a Node.js server that runs on our IRC server. It provides a 
 The card tracks, along with the state of the door (open or closed) is stored in a SQLite database. I used [squel](iddentao.github.io/squel/) to generate the SQL strings, and [validator](https://www.npmjs.com/package/validator) to escape and validate input.
 
 The Node.js server also provides a web interface for viewing card swipe logs, registering users, and de-registering users. This is built using [Express](http://expressjs.com/) with [Jade templating](http://jade-lang.com/). The login and session handling is done using [Passport.js](http://passportjs.org/), using its local strategy, and the SQLite database for storing the user password salts and hashes.
+
+![Logging into the web ap](https://farm9.staticflickr.com/8581/16088170224_c262c8c010_b_d.jpg)
+
+Here is what you see when you get to the web app.
+
+![Logged in to the web app](https://farm9.staticflickr.com/8594/16709434222_99d8295c30_b_d.jpg)
+
+Here is the default view in the web app. You see the door opening logs (which include all unsuccessful attempts). By default, a user sees the last week of logs, and they can opt to see more by entering the number of days in the box.
+
+I used Jade's templating engine to build the tables in the app, so when I render the view with Express, all I have to do is build an array with the data I need from the SQLite database, and then I can build the table in Jade:
+
+```
+file: door-server/views/swipe-logs.jade
+---------------------------------------
+
+
+table.table.table-striped.table-bordered.table-hover
+  thead
+    tr
+      th User
+      th Card Swipe Timestamp
+      th Access Granted
+  for row in data
+    tr
+    th= row[0]
+    th= row[1]
+    if row[2] == "true"
+      th.success= row[2]
+    else
+      th.danger= row[2]
+```
+
+If the swipe was successful, then I apply the Bootstrap success class, and if not I apply the Bootstrap danger class to give the colors.
 
 I couldn't find a satisfactory way to use the stepper motor from Node.js. The [pi-gpio](https://www.npmjs.com/package/pi-gpio) library works with Quick2Wire's [gpio-admin](https://github.com/quick2wire/quick2wire-gpio-admin) utility, and that is what is used for reading the door state. The disadvantage of the pi-gpio library is that opening the GPIO pins and writing to them require passing a callback for each action. By the time I opened all four needed pins, I was four callbacks deep.
 

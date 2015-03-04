@@ -81,12 +81,12 @@ table.table.table-striped.table-bordered.table-hover
       th Access Granted
   for row in data
     tr
-    th= row[0]
-    th= row[1]
-    if row[2] == "true"
-      th.success= row[2]
-    else
-      th.danger= row[2]
+      th= row[0]
+      th= row[1]
+      if row[2] == "true"
+        th.success= row[2]
+      else
+        th.danger= row[2]
 ```
 
 If the swipe was successful, then I apply the Bootstrap success class, and if not I apply the Bootstrap danger class to give the colors.

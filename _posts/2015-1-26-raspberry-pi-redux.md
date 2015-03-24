@@ -19,7 +19,6 @@ When the Computer Club moved rooms, I wanted to improve the software that I had 
 I accomplished this using a NEMA 17 stepper motor, and gears printed on the Computer Club's RepRap 3D printer. The smaller gear is mounted using a captive nut to the stepper motor's axle, and it turns the larger gear. String wraps around the shaft of the larger gear, between it and the body of the lid.
 
 ![Top view of the new opener](https://farm8.staticflickr.com/7347/16384671762_d04ee75958_o_d.jpg)
-The many small holes are the product of the [OpenSCAD script](http://www.thingiverse.com/thing:6544) I used to generate the gears. I needed a small hole to tie the string off with, and I'm not proficient enough with OpenSCAD to make a single small hole, so I had the script generate many holes so that they were small.
 
 ![Internal Wiring of the project](https://farm8.staticflickr.com/7300/16359614906_230b6787ea_o_d.jpg)
 Here is the wiring for the project. I am using the [Easy Driver](http://www.schmalzhaus.com/EasyDriver/) stepper motor driver from SparkFun. All you need to do is connect your stepper motor's coils correctly, provide 12 volts, and then pulse the step and direction pins to control your stepper.

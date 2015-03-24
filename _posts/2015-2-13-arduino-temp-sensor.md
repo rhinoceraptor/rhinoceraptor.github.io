@@ -5,6 +5,7 @@ title: Arduino Temperature Sensor
 
 ![Project board built](https://farm9.staticflickr.com/8638/16554037441_e3580ac3c7_z_d.jpg)
 
+
 I previously worked on an enclosure for the Computer Club server rack, and I thought it would be a good idea to put together a standalone temperature sensor system. Preferably it would interface over the internet so that IRC bots and other programs could talk to it.
 
 ![Server rack cabinet](https://farm9.staticflickr.com/8612/16524942312_81b622a8aa_z_d.jpg)
@@ -13,7 +14,7 @@ Here is the project, using an Arduino Uno for testing.
 
 ![The project using an Arduino Uno](https://farm8.staticflickr.com/7339/16525954455_dae4872608_z_d.jpg)
 
-The project will use four DHT-11 temperature sensors, an ATMega 328 with an Arduino bootloader (for ease of programming), and an ENC28J60 ethernet module. 
+The project will use four DHT-11 temperature sensors, an ATMega 328 with an Arduino bootloader (for ease of programming), and an ENC28J60 ethernet module.
 
 The microcontroller will take a temperature reading every few seconds, and when a connection comes in on its port 80, it will send back HTTP headers, ```text/json```, and JSON data for easy parsing, in the following format:
 
@@ -42,6 +43,9 @@ Here is the project built out on the breadboard.
 The code, along with necessary libraries for this project is [available here](https://github.com/rhinoceraptor/arduino-server-sensor).
 
 ### Building the project
+
+
+![Underside of the board](https://farm8.staticflickr.com/7435/15935531923_c2ed41a00a_z_d.jpg)
 
 ![Project in box](https://farm8.staticflickr.com/7410/16529706886_7436424da5_z_d.jpg)
 

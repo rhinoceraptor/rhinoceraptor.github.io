@@ -17,8 +17,8 @@ var my_func = function() {
 is transformed into
 
 ```
-// func.name === 'my_func'
-var func = function my_func() {
+// my_func.name === 'my_func'
+var my_func = function my_func() {
   return 'I am also a function expression, except I have name!';
 }
 ```

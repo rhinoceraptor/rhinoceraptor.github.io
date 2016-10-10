@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How I built a keyboard from scratch
+title: How I built a keyboard by hand
 ---
 
 ![The finished product](https://farm9.staticflickr.com/8746/30166008906_e0ac5eb5b2_k_d.jpg)

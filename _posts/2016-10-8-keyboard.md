@@ -53,5 +53,5 @@ I used a micro USB extension cable to complete the keyboard, and glued the end o
 
 To program the keyboard, I used the open source [QMK firmware](https://github.com/jackhumbert/qmk_firmware). I started with the [Atreus keyboard](https://atreus.technomancy.us) configuration, and edited the configuration header file to match the wiring of the rows and columns. I then edited the keymap header for the keyboard layout. The QMK firmware provides macros for function layers, and will automatically produce a standard shift layer.
 
-Then, (after installing some build tools), I compiled the firmware and flashed it to the Teensy using the Teensy loader tool provided PJRC.
+Then, (after installing some build tools), I compiled the firmware and flashed it to the Teensy using the Teensy loader tool provided by PJRC.
 

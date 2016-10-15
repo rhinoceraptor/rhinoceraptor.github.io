@@ -55,3 +55,4 @@ To program the keyboard, I used the open source [QMK firmware](https://github.co
 
 Then, (after installing some build tools), I compiled the firmware and flashed it to the Teensy using the Teensy loader tool provided by PJRC.
 
+[Discussion on Hacker News](https://news.ycombinator.com/item?id=12677169)
